@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "firstName": "gurry",
+        "lastName": "singh",
+        "email": "nothere@pls.com",
+        "phone": "(909) 250-9902",
+        "editing": false
+    },
+    {
+        "id": 2,
+        "firstName": "Mark",
+        "lastName": "Peters",
+        "email": "whynothere@pls.com",
+        "phone": "(250) 250-6692",
+        "editing": false
+    },
+    {
+        "id": 3,
+        "firstName": "Harry",
+        "lastName": "Miller",
+        "email": "millyouinsec@pls.com",
+        "phone": "(559) 222-1111",
+        "editing": false
+    }
+]
