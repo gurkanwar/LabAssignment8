@@ -1,8 +1,9 @@
+  
 [
     {
         "id": 1,
-        "firstName": "gurry",
-        "lastName": "singh",
+        "firstName": "Gurry",
+        "lastName": "Singh",
         "email": "nothere@pls.com",
         "phone": "(909) 250-9902",
         "editing": false

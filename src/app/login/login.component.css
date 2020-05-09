@@ -1,0 +1,11 @@
+.login-grid {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+height: 100vh;
+align-items: center;
+}
+
+.login-form{
+    padding: 25px;
+    background-color: #f5f5f5;
+}

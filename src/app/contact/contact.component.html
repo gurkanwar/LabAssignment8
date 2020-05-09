@@ -13,24 +13,33 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Contacts <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Hello, {{currentUser.username}}</a>
+      </li>
 
 
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="contactParams" name="search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit"(click)="searchContact(contactParams)">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+        [(ngModel)]="contactParams" name="search">
+      <div class="btn-group">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit"
+          (click)="searchContact(contactParams)">Search</button>
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit" (click)="logout()">Log Out</button>
+      </div>
     </form>
   </div>
 </nav>
 
 <ul class="nav justify-content-end nav-action-container">
   <li class="nav-item">
-    <button type="button" class="btn btn-primary contact-button"(click)="loadContacts()">Load Contacts</button>
+    <button type="button" class="btn btn-primary contact-button" (click)="loadContacts()">Load Contacts</button>
 
   </li>
   <li class="nav-item">
-    <button type="button" class="btn btn-primary contact-button"(click)="saveItemsToLocalStorage(contacts)">Save All</button>
+    <button type="button" class="btn btn-primary contact-button" (click)="saveItemsToLocalStorage(contacts)">Save
+      All</button>
 
   </li>
   <li class="nav-item">
@@ -59,21 +68,22 @@
         <td *ngIf="!contact.editing">{{contact.email}}</td>
         <td *ngIf="!contact.editing">{{contact.phone}}</td>
         <td *ngIf="!contact.editing">
-          <button type="button" class="btn btn-danger contact-button"(click)="deleteContact(i)">X</button>
+          <button type="button" class="btn btn-danger contact-button" (click)="deleteContact(i)">X</button>
         </td>
 
 
 
         <th *ngIf="contact.editing" scope="row">
-          <input [(ngModel)]="contact.id" type="text" class="form-control" placeholder="ID" aria-label="ID" aria-describedby="basic-addon1">
+          <input [(ngModel)]="contact.id" type="text" class="form-control" placeholder="ID" aria-label="ID"
+            aria-describedby="basic-addon1">
         </th>
         <td *ngIf="contact.editing">
-          <input [(ngModel)]="contact.firstName" type="text" class="form-control" placeholder="First Name" aria-label="First Name"
-            aria-describedby="basic-addon1">
+          <input [(ngModel)]="contact.firstName" type="text" class="form-control" placeholder="First Name"
+            aria-label="First Name" aria-describedby="basic-addon1">
         </td>
         <td *ngIf="contact.editing">
-          <input [(ngModel)]="contact.lastName" type="text" class="form-control" placeholder="Last Name" aria-label="Last Name"
-            aria-describedby="basic-addon1">
+          <input [(ngModel)]="contact.lastName" type="text" class="form-control" placeholder="Last Name"
+            aria-label="Last Name" aria-describedby="basic-addon1">
         </td>
         <td *ngIf="contact.editing">
           <input [(ngModel)]="contact.email" type="text" class="form-control" placeholder="Email" aria-label="Email"
@@ -85,10 +95,10 @@
         </td>
         <td *ngIf="contact.editing">
           <div class="btn-group">
-            <button type="button" class="btn btn-success contact-button"(click)="saveContact(contact)">Save</button>
-            <button type="button" class="btn btn-danger contact-button"(click)="deleteContact(i)">X</button>
+            <button type="button" class="btn btn-success contact-button" (click)="saveContact(contact)">Save</button>
+            <button type="button" class="btn btn-danger contact-button" (click)="deleteContact(i)">X</button>
           </div>
-         
+
         </td>
       </tr>
 

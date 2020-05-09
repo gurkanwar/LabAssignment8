@@ -6,3 +6,10 @@ html, body{
     max-height: 100vh;
     overflow: hidden;
 }
+
+.box-shadow {    
+    display: block;
+    -webkit-box-shadow: -1px 18px 23px -9px rgba(0,0,0,0.25);
+-moz-box-shadow: -1px 18px 23px -9px rgba(0,0,0,0.25);
+box-shadow: -1px 18px 23px -9px rgba(0,0,0,0.25);
+}
